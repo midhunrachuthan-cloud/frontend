@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Appointment Booking</h1>
+
+    <form id="appointmentForm">
+        <input type="text" id="patient" placeholder="Patient Name" required>
+        <input type="number" id="patient_id" placeholder="Patient ID" required>
+        <input type="date" id="date" required>
+        <input type="time" id="time" required>
+        <button type="submit">Add Appointment</button>
+    </form>
+
+    <h2>All Appointments</h2>
+    <button id="loadBtn">Load Appointments</button>
+
+    <ul id="appointmentsList"></ul>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
