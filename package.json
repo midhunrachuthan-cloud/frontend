@@ -1,12 +1,12 @@
 {
-  "name": "frontend",
+  "name": "modex-frontend",
   "version": "1.0.0",
-  "description": "Appointment frontend",
+  "description": "Frontend for Modex Appointment App",
   "main": "index.html",
   "scripts": {
-    "start": "http-server -p 10000"
+    "start": "serve -s . -l 10000"
   },
   "dependencies": {
-    "http-server": "^14.1.1"
+    "serve": "^14.2.1"
   }
 }
