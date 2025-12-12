@@ -1,3 +1,5 @@
+const backend = "https://backend-xlct.onrender.com";
+
 // ADD APPOINTMENT
 document.getElementById("appointmentForm").addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -9,7 +11,7 @@ document.getElementById("appointmentForm").addEventListener("submit", async (e) 
 
     const body = { patient, patient_id, date, time };
 
-    let res = await fetch("http://localhost:5000/add-appointment", {
+    let res = await fetch(`${backend}/add-appointment`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
@@ -21,7 +23,7 @@ document.getElementById("appointmentForm").addEventListener("submit", async (e) 
 
 // LOAD APPOINTMENTS
 document.getElementById("loadBtn").addEventListener("click", async () => {
-    let res = await fetch("http://localhost:5000/appointments");
+    let res = await fetch(`${backend}/appointments`);
     let data = await res.json();
 
     let list = document.getElementById("appointmentsList");
